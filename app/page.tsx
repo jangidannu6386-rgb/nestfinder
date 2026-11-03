@@ -22,7 +22,7 @@ interface TenantInfo {
 interface Room {
   id: string;
   roomNumber: string;
-  type: 'Single' | 'Double' | 'Triple Sharing';
+  type: 'Single' | 'Double Sharing' | 'Triple Sharing';
   status: 'Empty' | 'Full';
   tenant?: TenantInfo;
 }
