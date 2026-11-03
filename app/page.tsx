@@ -202,7 +202,8 @@ export default function Home() {
             <button onClick={() => setActiveTab('discovery')} className={activeTab === 'discovery' ? 'text-indigo-600 font-semibold' : 'text-slate-600'}>Discovery</button>
             {user && <button onClick={() => setActiveTab('dashboard')} className={activeTab === 'dashboard' ? 'text-indigo-600 font-semibold' : 'text-slate-600'}>Dashboard</button>}
           </nav>
-          <div>
+          <div className="flex items-center space-x-3">
+            <a href="/landlord/login" className="hidden sm:inline text-xs font-bold text-indigo-600 border border-indigo-200 px-3 py-2 rounded-xl hover:bg-indigo-50">Landlord Login</a>
             {user ? (
               <button onClick={handleLogout} className="text-rose-600 text-xs font-bold border px-3 py-1.5 rounded-full flex items-center space-x-1">
                 <LogOut className="w-3.5 h-3.5" /><span>Logout</span>
@@ -219,7 +220,10 @@ export default function Home() {
           <div className="text-center py-16">
             <h1 className="text-4xl font-black mb-4">Find Your Ideal Living Space Hassle-Free</h1>
             <p className="text-slate-600 mb-8">Direct owner PGs and rentals with zero brokerage.</p>
-            <button onClick={() => setActiveTab('discovery')} className="bg-indigo-600 text-white px-6 py-3 rounded-xl font-bold">Explore Properties</button>
+            <div className="flex flex-wrap justify-center gap-3">
+              <button onClick={() => setActiveTab('discovery')} className="bg-indigo-600 text-white px-6 py-3 rounded-xl font-bold">Explore Properties</button>
+              <a href="/landlord/signup" className="bg-white border border-indigo-200 text-indigo-700 px-6 py-3 rounded-xl font-bold">List your PG — Landlord Sign Up</a>
+            </div>
           </div>
         )}
         {activeTab === 'discovery' && (
