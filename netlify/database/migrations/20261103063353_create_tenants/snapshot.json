@@ -1,0 +1,165 @@
+{
+  "version": "8",
+  "dialect": "postgres",
+  "id": "8294bbb4-6a11-44ad-b35e-b72dceb39e9e",
+  "prevIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "ddl": [
+    {
+      "isRlsEnabled": false,
+      "name": "tenants",
+      "entityType": "tables",
+      "schema": "public"
+    },
+    {
+      "type": "serial",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "tenants"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "landlord_id",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "tenants"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "tenant_name",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "tenants"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "room_number",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "tenants"
+    },
+    {
+      "type": "integer",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "monthly_rent",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "tenants"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": null,
+      "generated": null,
+      "identity": null,
+      "name": "contact_number",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "tenants"
+    },
+    {
+      "type": "text",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "'Pending'",
+      "generated": null,
+      "identity": null,
+      "name": "rent_status",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "tenants"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "tenants"
+    },
+    {
+      "type": "timestamp",
+      "typeSchema": null,
+      "notNull": true,
+      "dimensions": 0,
+      "default": "now()",
+      "generated": null,
+      "identity": null,
+      "name": "updated_at",
+      "entityType": "columns",
+      "schema": "public",
+      "table": "tenants"
+    },
+    {
+      "nameExplicit": true,
+      "columns": [
+        {
+          "value": "landlord_id",
+          "isExpression": false,
+          "asc": true,
+          "nullsFirst": false,
+          "opclass": null
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "with": "",
+      "method": "btree",
+      "concurrently": false,
+      "name": "tenants_landlord_id_idx",
+      "entityType": "indexes",
+      "schema": "public",
+      "table": "tenants"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "tenants_pkey",
+      "schema": "public",
+      "table": "tenants",
+      "entityType": "pks"
+    }
+  ],
+  "renames": []
+}

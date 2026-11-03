@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import AuthCallbackHandler from '@/components/AuthCallbackHandler';
 
 export const metadata: Metadata = {
   title: 'NestFinder',
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <AuthCallbackHandler />
+      </body>
     </html>
   );
 }
